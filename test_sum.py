@@ -1,4 +1,4 @@
-from .sum_numbers import sum_two, operation
+from sum_numbers import sum_two, operation
 from pytest import raises
 import xarray as xr
 import numpy as np
