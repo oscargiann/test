@@ -33,7 +33,8 @@ jobs:
         run: |
           conda info
           conda list
+          
       - name: Test with pytest
         run: |
-          conda install pytest
+          pytest
           $CONDA/bin/pytest --doctest-modules --junitxml=junit/test-results-ubuntu.xml
