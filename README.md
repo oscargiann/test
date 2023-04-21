@@ -1,4 +1,4 @@
 # test
 
 
-https://github.com/oscargiann/test/actions/workflows/testing.yml/badge.svg
+![testing](https://github.com/oscargiann/test/actions/workflows/testing.yml/badge.svg)
