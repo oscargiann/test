@@ -27,7 +27,7 @@ jobs:
         with:
           mamba-version: "*"
           channels: conda-forge,defaults
-          channel-priority: true
+          channel-priority: false
           activate-environment: test-test
           environment-file: environment.yml
           python-version: 3.9          
