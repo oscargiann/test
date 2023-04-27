@@ -27,11 +27,11 @@ jobs:
         with:
           mamba-version: "*"
           channels: conda-forge,defaults
-          channel-priority: false
+          channel-priority: true
           activate-environment: test-test
           environment-file: environment.yml
           python-version: 3.9          
-          auto-activate-base: false
+          auto-activate-base: true
       
       - name: Check Conda version
         run: |
