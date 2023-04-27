@@ -40,8 +40,9 @@ jobs:
           
       - name: Test with pytest
         run: |
-          find . -name \*.pyc -delete
+          find . -name '*.pyc' -type f -delete
           find -name '*.pyc'
+          find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
           pytest --doctest-modules --junitxml=junit/test-results-ubuntu.xml
         
   # Windows
@@ -111,5 +112,8 @@ jobs:
           
       - name: Test with pytest
         run: |
+          find . -name '*.pyc' -type f -delete
+          find -name '*.pyc'
+          find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
           pytest --doctest-modules --junitxml=junit/test-results-macos.xml
           
