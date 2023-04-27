@@ -43,14 +43,6 @@ jobs:
         run: |
           pytest --doctest-modules --junitxml=junit/test-results-ubuntu.xml
         
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          files: |
-            junit/test-results-ubuntu.xml
-
-
   # Windows
   windows-testing:
     name: Windows Unit Testing
@@ -86,13 +78,6 @@ jobs:
         run: |
           pytest --doctest-modules --junitxml=junit/test-results-windows.xml
           
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action/composite@v2
-        if: always()
-        with:
-          files: |
-            junit/test-results-windows.xml
-
   
   # MacOS
   macOS-testing:
@@ -129,9 +114,3 @@ jobs:
         run: |
           pytest --doctest-modules --junitxml=junit/test-results-macos.xml
           
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action/composite@v2
-        if: always()
-        with:
-          files: |
-            junit/test-results-macos.xml
