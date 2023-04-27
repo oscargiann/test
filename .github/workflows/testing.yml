@@ -32,7 +32,6 @@ jobs:
           environment-file: environment.yml
           python-version: 3.9          
           auto-activate-base: false
-          auto-update-conda: true
 
       
       - name: Check Conda version
